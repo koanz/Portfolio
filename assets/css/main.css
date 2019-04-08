@@ -7,6 +7,23 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.box-img{
+	display:none;
+}
+
+.thumb{
+	width: 100%;
+}
+
+.images{
+	width: 100%;
+	height: 100%;
+}
+
+.container-box-img{
+	display: none;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
