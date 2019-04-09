@@ -3795,6 +3795,12 @@ input, select, textarea {
 					padding: 6rem 4rem 4rem 4rem ;
 				}
 
+				#main > .post header.major h2{
+						font-size: 2.2rem;
+						line-height: 1.2;
+						margin: 0 0 1.5rem 0;
+					}
+
 			}
 
 			@media screen and (max-width: 736px) {
@@ -3808,8 +3814,14 @@ input, select, textarea {
 						margin-bottom: 2rem;
 					}
 
-					#main > .post header.major > h1, #main > .post header.major h2 {
+					#main > .post header.major > h1 {
 						font-size: 2.5rem;
+						line-height: 1.2;
+						margin: 0 0 1.5rem 0;
+					}
+
+					#main > .post header.major h2{
+						font-size: 1.5rem;
 						line-height: 1.2;
 						margin: 0 0 1.5rem 0;
 					}
@@ -4496,6 +4508,7 @@ input, select, textarea {
 		padding: 0.375rem 1.25rem;
 		text-transform: uppercase;
 		z-index: 10001;
+		background-color: rgba(0,0,0,0.8) !important;
 	}
 
 		#navPanelToggle:before {
