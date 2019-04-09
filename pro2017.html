@@ -32,33 +32,43 @@
 					<article class="post featured">
 						<h2>Sistema de Gestión aseguradora de Vehículos.</h2>
 						<p>Realizado en PHP, diseño de interfaz con Bootstrap y Base de datos MySQL.<br/>* Las imagenes han sido editadas por contener información del sistema.</p>
-						<a href="#" class="image main"><img src="images/img-proyectos/gestion_aseguradora/ventana_inicio.jpg" alt="" /></a>
+						<div class="thumb">
+							<img class="image fit" src="images/img-proyectos/gestion_aseguradora/ventana_inicio.jpg" alt="" />
+						</div>
 						<header class="major">
 							<p>GUI - Ventana inicio.</p>
 						</header>
 					</article>
 
 					<article class="post featured">
-						<a href="#" class="image main"><img src="images/img-proyectos/gestion_aseguradora/ventana_info_cliente.jpg" alt="" /></a>
+						<div class="thumb">
+							<img class="image fit" src="images/img-proyectos/gestion_aseguradora/ventana_info_cliente.jpg" alt="" />
+						</div>
 						<header class="major">
 							<p>GUI - Ventana información de cliente.</p>
 						</header>
 					</article>
 
 					<article class="post featured">
-						<a href="#" class="image main"><img src="images/img-proyectos/gestion_aseguradora/ventana_cliente.jpg" alt="" /></a>
+						<div class="thumb">
+							<img class="image fit" src="images/img-proyectos/gestion_aseguradora/ventana_cliente.jpg" alt="" />
+						</div>
 						<header class="major">
 							<p>GUI - Ventana cliente.</p>
 						</header>
 					</article>
-
 					<article class="post featured">
-						<a href="#" class="image main"><img src="images/img-proyectos/gestion_aseguradora/ventana_pago.jpg" alt="" /></a>
+						<div class="thumb">
+							<img class="image fit" src="images/img-proyectos/gestion_aseguradora/ventana_pago.jpg" alt="" />
+						</div>
 						<header class="major">
 							<p>GUI - Ventana pago.</p>
 						</header>
 					</article>
 				</section>
+			</div>
+			<div class="box-img">
+				<div class="container-box-img"></div>
 			</div>
 			<!-- Footer -->
 			<footer id="footer">
@@ -85,5 +95,45 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.thumb').click(function(){
+					var src = $(this);
+					$('.box-img').fadeIn(300, function(){
+						$('.box-img').css({
+							'position':'absolute',
+							'top':'0',
+							'left':'0',
+							'width':'100%',
+							'height':'100%',
+							'background-color':'rgba(0,0,0,0.8)',
+							'z-index':'999',
+							'display':'block'
+						});
+
+						$('.container-box-img').prepend('<img class="images" style="border: 1px solid rgba(255,255,255,0.5);" src="'+src.find('img').attr('src')+'" />')
+						
+						$('.container-box-img').css({
+							'position':'fixed',
+							'top':'50px',
+							'width':'80%',
+							'left':'0',
+							'right':'0',
+							'margin':'auto',
+							'z-index':'10000',
+							'display':'block'
+						});
+					});
+				});
+
+				$('.box-img').click(function(){
+					$(this).fadeOut(300, function(){
+						$('.box-img').css('display','none');
+						$('.container-box-img').css('display','none');
+						$('.container-box-img').empty();
+					});
+				});
+			});
+		</script>
 	</body>
 </html>
